@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест с попапом</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Первый экран (главная страница) -->
+    <div class="first-screen">
+        <div class="first-screen__content">
+            <div class="first-screen__left">
+                <div class="first-screen__text-wrapper">
+                    <p class="first-screen__text">Детальный отчет</p>
+                </div>
+                <h1 class="first-screen__title">Расшифруйте медицинские анализы
+                    <span>
+                        за 2 минуты
+                    </span>
+
+                </h1>
+
+                <!-- Нумерованный список -->
+                <ul class="first-screen__list">
+                    <li class="first-screen__list-item">Прикрепите фото или PDF анализа</li>
+                    <li class="first-screen__list-item">Ответьте на несколько вопросов</li>
+                    <li class="first-screen__list-item">Получите отчет на почту</li>
+                </ul>
+                <button class="button button--primary main--hover" id="openModalBtn">
+                    <span class="button__text">Пройти тест и загрузить анализы</span>
+                    <span class="button__circle">
+                        <svg class="button__arrow-img" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke="currentColor"
+                                d="M0.901149 4.43488L12.3859 4.43488M12.3859 4.43488L8.85211 0.901123M12.3859 4.43488L8.85211 7.96864"
+                                stroke-width="1.80222" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="first-screen__right">
+                <!-- Блок с доктором -->
+                <div class="dnk__image-wrapper">
+                    <img src="images/dnk-capsule.png" alt="Капсула" class="dnk__image">
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__image-wrapper">
+                        <img src="images/doctor.png" alt="Доктор" class="doctor-card__image" loading="lazy">
+                    </div>
+                    <div class="doctor-card__text-wrapper">
+                        <p class="doctor-card__name">Мещеряков Дмитрий Георгиевич</p>
+                        <p class="doctor-card__title">CEO сервиса «Смарт Лаб» и действующий врач</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Капсула с молекулой -->
+            <div class="capsule-image">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/capsule-molecule-mobile.png">
+                    <img src="images/capsule-molecule-desktop.png" alt="Капсула с молекулой"
+                        class="capsule-image__img capsule-image__img" width="823" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modalOverlay">
+        <div class="capsule-image__last-step" id="capsuleImageLast">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/capsule-molecule-mobile.png">
+                <img src="images/capsule-molecule-desktop.png" alt="Капсула с молекулой"
+                    class="capsule-image__img capsule-image__img" width="823" loading="lazy">
+            </picture>
+        </div>
+
+        <div class="modal__container" id="modalContainer">
+            <div class="dnk__image-wrapper__last-step" id="dnkImageLast">
+                <img src="images/dnk-capsule.png" alt="Капсула" class="dnk__image">
+            </div>
+            <!-- Modal Header -->
+            <div class="modal__header">
+                <div class="modal__header-content">
+
+                    <button class="modal__close" id="closeModalBtn">
+                        <span class="modal__close-icon">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="step__modal-wrapper" id="stepModalWrapper">
+                <div class="header__step-wrapper" id="headerStepWrapper">
+                    <p class="header__step" id="headerStep">Шаг 1</p>
+                </div>
+                <!-- Modal Steps (правильная структура) -->
+                <div class="modal__steps" id="modalSteps">
+                    <!-- Шаг 1 -->
+                    <div class="step step--1 step--active" data-step="1">
+                        <h2 class="step__title">Загрузите ваши анализы</h2>
+
+                        <button class="button download__button--primary" id="downloadButton">
+                            <div>
+                                <img src="images/download.svg" alt="Загрузка" class="button__download-img">
+                                <p class="download__button-text">Загрузить PDF</p>
+                                <p class="dowload__button-additional-text">до 15 Мб</p>
+                            </div>
+                        </button>
+
+                        <!-- Круглые чекбоксы -->
+                        <div class="checkbox-group">
+                            <!-- Чекбокс 1 -->
+                            <label class="checkbox checkbox--required">
+                                <input type="checkbox" class="checkbox__input" id="consent1" required>
+                                <span class="checkbox__circle"></span>
+                                <span class="checkbox__text">
+                                    Загружая PDF, я даю свое согласие с
+                                    <a href="#" class="checkbox__link" onclick="return false;">политикой
+                                        конфиденциальности</a>
+                                    и согласие на обработку моих персональных данных
+                                </span>
+                            </label>
+
+                            <!-- Чекбокс 2 -->
+                            <label class="checkbox checkbox--required">
+                                <input type="checkbox" class="checkbox__input" id="consent2" required>
+                                <span class="checkbox__circle"></span>
+                                <span class="checkbox__text">
+                                    Загружая PDF, я даю согласие с
+                                    <a href="#" class="checkbox__link" onclick="return false;">пользовательским
+                                        соглашением</a>
+                                    и
+                                    <a href="#" class="checkbox__link" onclick="return false;">офертой</a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Шаг 2 -->
+                    <div class="step step--2" data-step="2">
+                        <h2 class="step__title">Заполните данные</h2>
+
+                        <form class="form" id="step2Form">
+                            <!-- Email (обязательный) -->
+                            <div class="form--left">
+                                <div class="form__group">
+                                    <label class="form__label">
+                                        Ваш e-mail
+                                    </label>
+                                    <input type="email" class="form__input form__input--email" id="email"
+                                        placeholder="aleksey@mail.ru" required>
+                                    <div class="form__error" id="emailError">Введите корректный email</div>
+                                </div>
+
+                                <div class="form__group--wrapper">
+
+                                    <!-- Пол (радио кнопки) -->
+                                    <div class="form__group">
+                                        <label class="form__label">Выберите пол</label>
+                                        <div class="form__radio-group">
+                                            <label class="form__radio">
+                                                <input type="radio" name="gender" value="male"
+                                                    class="form__radio-input">
+                                                <span class="form__radio-circle"></span>
+                                                <span class="form__radio-text">Мужской</span>
+                                            </label>
+                                            <label class="form__radio">
+                                                <input type="radio" name="gender" value="female"
+                                                    class="form__radio-input">
+                                                <span class="form__radio-circle"></span>
+                                                <span class="form__radio-text">Женский</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Возраст -->
+                                    <div class="form__group">
+                                        <label class="form__label">Ваш возраст</label>
+                                        <input type="text" class="form__input" id="age" placeholder="25 лет" min="1"
+                                            max="120">
+                                    </div>
+                                </div>
+
+                                <!-- Симптомы и хронические заболевания (большой инпут) -->
+                                <div class="form__group">
+                                    <label class="form__label">Симптомы и хронические заболевания</label>
+                                    <textarea class="form__textarea" id="symptoms" rows="3"
+                                        placeholder="Напишите так, как рассказали бы врачу"></textarea>
+                                </div>
+
+                            </div>
+                            <!-- Комментарий (еще больше) -->
+                            <div class="form__group form--right">
+                                <label class="form__label">Комментарий</label>
+                                <textarea class="form__textarea form__textarea--large" id="comment" rows="5"
+                                    placeholder="Любой интересующий вопрос или другая важная информация"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Шаг 3 -->
+                    <div class="step step--3" data-step="3">
+                        <h2 class="step__title">Оплатите отчет</h2>
+
+                        <div class="payment">
+                            <!-- Основной тариф -->
+                            <div class="payment__card payment__card--main">
+                                <h3 class="payment__title">Разовый отчет</h3>
+
+                                <div class="payment__guarantee">
+                                    <img src="images/guarantee.svg" alt="" class="payment__icon">
+                                    <div class="payment__guarantee-text">
+                                        <p class="payment__guarantee-title">Гарантируем результат</p>
+                                        <p class="payment__guarantee-desc">Если отчёт не поможет, вернём деньги или
+                                            предоставим новый</p>
+                                    </div>
+                                </div>
+
+                                <div class="payment__footer">
+                                    <a href="https://t.me/smartlab_aibot" target="_blank" class="payment__bot-button"
+                                        rel="noopener">
+                                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.6009 0.136387L0.45073 5.03234C-0.0382158 5.26033-0.203591 5.71692 0.332552 5.96471L3.4496 6.99981L10.9862 2.13271C11.3978 1.82716 11.819 1.90864 11.4565 2.24476L4.98357 8.36894L4.78024 10.9607C4.96857 11.3609 5.31341 11.3627 5.53337 11.1638L7.32421 9.39315L10.3913 11.7931C11.1037 12.2337 11.4913 11.9494 11.6446 11.1417L13.6563 1.18775C13.8652 0.193526 13.509-0.244538 12.6009 0.136387Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+
+                                        Telegram-бот
+                                    </a>
+                                    <p class="payment__subscription-text">Доступно 3 отчета, а также безлимитная
+                                        подписка</p>
+                                </div>
+                            </div>
+
+                            <!-- Разделитель -->
+                            <div class="payment__divider"></div>
+
+                            <!-- Блок с ценой и оплатой -->
+                            <div class="payment__price-block">
+                                <div class="payment__price">199₽</div>
+
+                                <button class="button button--primary button__hover--dark" id="payButton">
+                                    <span class="button__text">Оплатить</span>
+                                    <span class="button__circle">
+                                        <svg class="button__arrow-img" width="14" height="9" viewBox="0 0 14 9"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke="currentColor"
+                                                d="M0.901149 4.43488L12.3859 4.43488M12.3859 4.43488L8.85211 0.901123M12.3859 4.43488L8.85211 7.96864"
+                                                stroke-width="1.80222" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+
+                                <p class="payment__description">Подробная расшифровка одного анализа</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Шаг 4 (поздравление) -->
+                    <div class="step step--4" data-step="4">
+                        <div class="last-screen">
+                            <h2 class="last-screen__title">
+                                <p class="last-screen__thanks">Спасибо!</p>
+                                <span>Расшифровка вашего анализа началась</span>
+                            </h2>
+                            <p class="last-screen__description">Вы получите результат на указанный e-mail при оплате в
+                                течение нескольких минут на почту</p>
+                            <button class="button button--primary button--inverted" id="backToMainBtn">
+                                <span class="button__text">Вернуться на главную</span>
+                                <span class="button__circle button__circle--inverted">
+                                    <svg class="button__arrow-img" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke="currentColor"
+                                            d="M0.901149 4.43488L12.3859 4.43488M12.3859 4.43488L8.85211 0.901123M12.3859 4.43488L8.85211 7.96864"
+                                            stroke-width="1.80222" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal__footer">
+                <div class="modal__footer--left">
+                    <div class="progress">
+                        <div class="progress__bar" id="progressBar"></div>
+                    </div>
+                    <span class="modal__step" id="stepIndicator">1/5</span>
+                </div>
+
+                <div class="modal__footer--right">
+                    <button class="button button--left button--secondary" id="prevBtn">Назад</button>
+                    <button class="button button--right button--primary" id="nextBtn">Далее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
