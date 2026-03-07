@@ -1603,7 +1603,7 @@ textarea::placeholder {
 }
 
 /* Малые телефоны (до 575px) */
-@media (max-width: 575px) {
+@media (max-width: 575px) and (min-width: 361px) {
   .first-screen__content {
     width: 450px;
     border-radius: 50px;
@@ -1641,18 +1641,7 @@ textarea::placeholder {
     flex-direction: row-reverse;
   }
 
-  .first-screen__title {
-    font-size: 36px;
-    letter-spacing: -2.3px;
-    width: 100%;
-    margin-bottom: 25px;
-    text-align: start;
-
-    span {
-      display: block;
-    }
-
-  }
+ 
 
   .first-screen__list {
     align-items: flex-start;
@@ -1799,5 +1788,690 @@ textarea::placeholder {
   .button__circle {
     width: 38px;
     height: 38px;
+  }
+
+  .first-screen__content {
+    width: 354px;
+    border-radius: 37px;
+    padding: 24px 23px 23px 19px;
+    gap: 48px;
+  }
+
+  .first-screen__left {
+    gap: 54px;
+  }
+
+  .first-screen__text-wrapper {
+    padding: 6px 12px;
+    margin-bottom: 10px;
+  }
+
+  .first-screen__text {
+    font-size: 12px;
+    letter-spacing: -0.7px;
+    text-align: left;
+  }
+
+  .first-screen__text::before {
+    margin-right: 9px;
+    width: 4px;
+    height: 4px;
+  }
+
+  .first-screen__title {
+    width: 100%;
+    text-align: start;
+    font-size: 27px;
+    letter-spacing: -1.5px;
+    margin-bottom: 19px;
+    line-height: 104%;
+
+    span {
+      display: block;
+    }
+  }
+
+  .first-screen__list {
+    gap: 10px;
+  }
+
+  .first-screen__list-item {
+    font-size: 14px;
+    gap: 15px;
+    letter-spacing: -0.5px;
+  }
+
+  .first-screen__list-item::before {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+
+  .first-screen__right {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .doctor-card {
+    margin-left: 13px;
+    margin-top: 4px;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .doctor-card__image-wrapper {
+    margin-right: 12px;
+    max-width: 28px;
+    height: 28px;
+  }
+
+  .doctor-card__name {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+  }
+
+  .doctor-card__title {
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    line-height: 130%;
+  }
+
+  .dnk__image-wrapper {
+    width: 30%;
+    margin-right: 0;
+    transform: translateY(0);
+  }
+
+  .capsule-image {
+    top: -80px;
+    right: -8px;
+    transform: scale(0.8) rotate(6deg);
+    margin: -40px 0 -30px auto;
+    max-width: 205px;
+  }
+
+  .capsule-image__img {
+    width: 100%;
+  }
+
+  /* Модальное окно */
+  .modal__container {
+    width: 300px;
+    padding: 20px 15px;
+    border-radius: 30px;
+    background-position:
+      calc(100% - 350px) -120px,
+      calc(100% + 150px) -120px,
+      0 0;
+  }
+
+  .step__modal-wrapper {
+    max-width: 260px;
+    margin-top: 10px;
+  }
+
+  .step__title {
+    font-size: 22px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+  }
+
+  .header__step-wrapper {
+    padding: 5px 10px;
+  }
+
+  .header__step {
+    font-size: 11px;
+  }
+
+  .step--1,
+  .step--2,
+  .step--3,
+  .step--4 {
+    max-width: 100%;
+  }
+
+  /* Формы */
+  .form__group--wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form__group--wrapper>div {
+    width: 100%;
+  }
+
+  .form__label {
+    font-size: 12px;
+  }
+
+  .form__input {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .form__textarea {
+    height: 50px;
+    font-size: 9px;
+  }
+
+  /* Платежный блок */
+  .payment {
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .payment__title {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .payment__guarantee {
+    padding: 8px;
+  }
+
+  .payment__guarantee-title {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .payment__guarantee-desc {
+    font-size: 10px;
+  }
+
+  .payment__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .payment__bot-button {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
+
+  .payment__price {
+    font-size: 32px;
+  }
+
+  .payment__pay-button {
+    max-width: 120px;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .payment__description {
+    font-size: 9px;
+  }
+
+  /* Кнопки */
+  .button--primary {
+    padding: 8px 10px 8px 20px;
+    gap: 15px;
+    width: 99%;
+    justify-content: space-between;
+  }
+
+  .button__text {
+    font-size: 14px;
+    letter-spacing: -0.4px;
+
+  }
+
+  .button__circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .button--secondary {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .download__button--primary {
+    padding: 12px 30px;
+    font-size: 13px;
+  }
+
+  /* Чекбоксы */
+  .checkbox-group {
+    max-width: 100%;
+  }
+
+  .checkbox__text {
+    font-size: 8px;
+    line-height: 120%;
+  }
+
+  /* Прогресс */
+  .progress {
+    width: 90px;
+    height: 6px;
+  }
+
+  /* Футер модалки */
+  .modal__footer {
+    gap: 10px;
+  }
+
+  .modal__footer--left,
+  .modal__footer--right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal__footer .button--left,
+  .modal__footer .button--right {
+    width: 100%;
+    height: 38px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Последний экран */
+  .last-screen {
+    gap: 15px;
+  }
+
+  .last-screen__title {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+
+  .last-screen__description {
+    margin: 0 10px;
+    font-size: 11px;
+  }
+
+  .capsule-image__last-step,
+  .dnk__image-wrapper__last-step {
+    display: none;
+  }
+}
+
+/* Сверхмалые экраны (до 360px) */
+@media (max-width: 360px) {
+  .first-screen__content {
+    width: 341px;
+    border-radius: 37px;
+    padding: 24px 23px 23px 19px;
+    gap: 48px;
+  }
+
+  .first-screen__left {
+    gap: 54px;
+  }
+
+  .first-screen__text-wrapper {
+    padding: 6px 12px;
+    margin-bottom: 10px;
+  }
+
+  .first-screen__text {
+    font-size: 12px;
+    letter-spacing: -0.7px;
+    text-align: left;
+  }
+
+  .first-screen__text::before {
+    margin-right: 9px;
+    width: 4px;
+    height: 4px;
+  }
+
+  .first-screen__title {
+    font-size: 27px;
+    letter-spacing: -1.5px;
+    margin-bottom: 19px;
+    line-height: 104%;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .first-screen__list {
+    gap: 10px;
+  }
+
+  .first-screen__list-item {
+    font-size: 14px;
+    gap: 15px;
+    letter-spacing: -0.5px;
+  }
+
+  .first-screen__list-item::before {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+
+  .first-screen__right {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .doctor-card {
+    margin-left: 13px;
+    margin-top: 4px;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .doctor-card__image-wrapper {
+    margin-right: 12px;
+    max-width: 28px;
+    height: 28px;
+  }
+
+  .doctor-card__name {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+  }
+
+  .doctor-card__title {
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    line-height: 130%;
+  }
+
+  .dnk__image-wrapper {
+    width: 30%;
+    margin-right: 0;
+    transform: translateY(0);
+  }
+
+  .capsule-image {
+    top: -80px;
+    right: -8px;
+    transform: scale(0.8) rotate(6deg);
+    margin: -40px 0 -30px auto;
+    max-width: 205px;
+  }
+
+  .capsule-image__img {
+    width: 100%;
+  }
+
+  /* Модальное окно */
+  .modal__container {
+    width: 300px;
+    padding: 20px 15px;
+    border-radius: 30px;
+    background-position:
+      calc(100% - 350px) -120px,
+      calc(100% + 150px) -120px,
+      0 0;
+  }
+
+  .step__modal-wrapper {
+    max-width: 260px;
+    margin-top: 10px;
+  }
+
+  .step__title {
+    font-size: 22px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+  }
+
+  .header__step-wrapper {
+    padding: 5px 10px;
+  }
+
+  .header__step {
+    font-size: 11px;
+  }
+
+  .step--1,
+  .step--2,
+  .step--3,
+  .step--4 {
+    max-width: 100%;
+  }
+
+  /* Формы */
+  .form__group--wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form__group--wrapper>div {
+    width: 100%;
+  }
+
+  .form__label {
+    font-size: 12px;
+  }
+
+  .form__input {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .form__textarea {
+    height: 50px;
+    font-size: 9px;
+  }
+
+  /* Платежный блок */
+  .payment {
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .payment__title {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .payment__guarantee {
+    padding: 8px;
+  }
+
+  .payment__guarantee-title {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .payment__guarantee-desc {
+    font-size: 10px;
+  }
+
+  .payment__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .payment__bot-button {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
+
+  .payment__price {
+    font-size: 32px;
+  }
+
+  .payment__pay-button {
+    max-width: 120px;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .payment__description {
+    font-size: 9px;
+  }
+
+  /* Кнопки */
+  .button--primary {
+    padding: 8px 10px 8px 20px;
+    gap: 15px;
+    width: 99%;
+    justify-content: space-between;
+  }
+
+  .button__text {
+    font-size: 14px;
+    letter-spacing: -0.4px;
+
+  }
+
+  .button__circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .button--secondary {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .download__button--primary {
+    padding: 12px 30px;
+    font-size: 13px;
+  }
+
+  /* Чекбоксы */
+  .checkbox-group {
+    max-width: 100%;
+  }
+
+  .checkbox__text {
+    font-size: 8px;
+    line-height: 120%;
+  }
+
+  /* Прогресс */
+  .progress {
+    width: 90px;
+    height: 6px;
+  }
+
+  /* Футер модалки */
+  .modal__footer {
+    gap: 10px;
+  }
+
+  .modal__footer--left,
+  .modal__footer--right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal__footer .button--left,
+  .modal__footer .button--right {
+    width: 100%;
+    height: 38px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Последний экран */
+  .last-screen {
+    gap: 15px;
+  }
+
+  .last-screen__title {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+
+  .last-screen__description {
+    margin: 0 10px;
+    font-size: 11px;
+  }
+
+  .capsule-image__last-step,
+  .dnk__image-wrapper__last-step {
+    display: none;
+  }
+}
+
+/* Экстремально малые экраны (до 320px) */
+@media (max-width: 320px) {
+  .first-screen__content {
+    width: 280px;
+    padding: 25px 15px 20px 15px;
+    border-radius: 30px;
+  }
+
+  .first-screen__title {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  .first-screen__list-item {
+    font-size: 13px;
+  }
+
+  .first-screen__list-item::before {
+    width: 22px;
+    height: 22px;
+    font-size: 9px;
+  }
+
+  .capsule-image {
+    top: -73px;
+    right: -33px;
+    transform: scale(0.6) rotate(6deg);
+    margin: -40px 0 -30px auto;
+    max-width: 205px;
+  }
+
+  .doctor-card__name {
+    font-size: 14px;
+  }
+
+  .doctor-card__title {
+    font-size: 10px;
+  }
+
+  .modal__container {
+    width: 260px;
+    padding: 15px 10px;
+  }
+
+  .step__title {
+    font-size: 20px;
+  }
+
+  .payment {
+    max-width: 240px;
+    padding: 12px;
+  }
+
+  .payment__title {
+    font-size: 18px;
+  }
+
+  .payment__price {
+    font-size: 28px;
+  }
+
+  .button__text {
+    font-size: 12px;
+  }
+
+  .button__circle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .button--primary {
+    padding: 8px 8px 8px 16px;
+    gap: 0px;
+  }
+
+  .dnk__image-wrapper {
+    width: 28%;
   }
 }
