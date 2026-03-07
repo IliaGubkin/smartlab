@@ -17,22 +17,25 @@
     <div class="first-screen">
         <div class="first-screen__content">
             <div class="first-screen__left">
-                <div class="first-screen__text-wrapper">
-                    <p class="first-screen__text">Детальный отчет</p>
+                <div>
+                    <div class="first-screen__text-wrapper">
+                        <p class="first-screen__text">Детальный отчет</p>
+                    </div>
+                    <h1 class="first-screen__title">Расшифруйте <br> медицинские анализы
+                        <span>
+                            за 2 минуты
+                        </span>
+
+                    </h1>
+
+                    <!-- Нумерованный список -->
+                    <ul class="first-screen__list">
+                        <li class="first-screen__list-item">Прикрепите фото или PDF анализа</li>
+                        <li class="first-screen__list-item">Ответьте на несколько вопросов</li>
+                        <li class="first-screen__list-item">Получите отчет на почту</li>
+                    </ul>
                 </div>
-                <h1 class="first-screen__title">Расшифруйте медицинские анализы
-                    <span>
-                        за 2 минуты
-                    </span>
 
-                </h1>
-
-                <!-- Нумерованный список -->
-                <ul class="first-screen__list">
-                    <li class="first-screen__list-item">Прикрепите фото или PDF анализа</li>
-                    <li class="first-screen__list-item">Ответьте на несколько вопросов</li>
-                    <li class="first-screen__list-item">Получите отчет на почту</li>
-                </ul>
                 <button class="button button--primary main--hover" id="openModalBtn">
                     <span class="button__text">Пройти тест и загрузить анализы</span>
                     <span class="button__circle">
@@ -65,8 +68,8 @@
             <div class="capsule-image">
                 <picture>
                     <source media="(max-width: 768px)" srcset="images/capsule-molecule-mobile.png">
-                    <img src="images/capsule-molecule-desktop.png" alt="Капсула с молекулой"
-                        class="capsule-image__img capsule-image__img" width="823" loading="lazy">
+                    <img src="images/capsule-molecule-desktop.png" alt="Капсула с молекулой" class="capsule-image__img"
+                        loading="lazy">
                 </picture>
             </div>
         </div>
@@ -74,15 +77,14 @@
 
     <!-- Modal -->
     <div class="modal" id="modalOverlay">
-        <div class="capsule-image__last-step" id="capsuleImageLast">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/capsule-molecule-mobile.png">
-                <img src="images/capsule-molecule-desktop.png" alt="Капсула с молекулой"
-                    class="capsule-image__img capsule-image__img" width="823" loading="lazy">
-            </picture>
-        </div>
-
         <div class="modal__container" id="modalContainer">
+            <div class="capsule-image__last-step" id="capsuleImageLast">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/capsule-molecule-mobile.png">
+                    <img src="images/capsule-molecule-desktop.png" alt="Капсула с молекулой" class="capsule-image__img"
+                        width="823" loading="lazy">
+                </picture>
+            </div>
             <div class="dnk__image-wrapper__last-step" id="dnkImageLast">
                 <img src="images/dnk-capsule.png" alt="Капсула" class="dnk__image">
             </div>

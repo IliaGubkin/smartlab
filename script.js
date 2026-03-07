@@ -189,9 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentStep === totalSteps) {
       modalWrapper.style.margin = "auto";
       modalContainer.style.background = 'url("images/line-9.svg") no-repeat left top, url("images/line-10.svg") no-repeat right bottom, linear-gradient(165deg, color(display-p3 0.188 0.259 0.365) 0.69%, color(display-p3 0.094 0.698 0.886) 63.66%, color(display-p3 0.918 0.984 1.000) 102.43%)'
-
-     
-
     }
 
     const headerStep = document.getElementById("headerStep");
