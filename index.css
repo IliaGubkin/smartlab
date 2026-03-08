@@ -330,7 +330,7 @@ textarea::placeholder {
   margin-bottom: 3px;
 }
 
-.dowload__button-additional-text {
+.download__button-additional-text {
   font-size: 10px;
   font-weight: 400;
   color: rgba(180, 236, 252, 1)
@@ -1695,7 +1695,7 @@ textarea::placeholder {
     margin-bottom: 4px;
   }
 
-  .dowload__button-additional-text {
+  .download__button-additional-text {
     font-size: 13px;
 
   }
@@ -2036,7 +2036,7 @@ textarea::placeholder {
     margin-bottom: 4px;
   }
 
-  .dowload__button-additional-text {
+  .download__button-additional-text {
     font-size: 13px;
 
   }
@@ -2555,7 +2555,7 @@ textarea::placeholder {
     margin-bottom: 5px;
   }
 
-  .dowload__button-additional-text {
+  .download__button-additional-text {
     font-size: 12px;
 
   }
