@@ -983,6 +983,9 @@ textarea::placeholder {
 }
 
 .modal__close-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 28px;
   line-height: 1;
   font-weight: 300;
