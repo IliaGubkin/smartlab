@@ -127,15 +127,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   nextBtn.addEventListener("click", function () {
     // Валидация
-    // if (currentStep === 1) {
-    //   if (!validateStep1()) {
-    //     return;
-    //   }
-    // } else if (currentStep === 2) {
-    //   if (!validateStep2()) {
-    //     return;
-    //   }
-    // }
+    if (currentStep === 1) {
+      if (!validateStep1()) {
+        return;
+      }
+    } else if (currentStep === 2) {
+      if (!validateStep2()) {
+        return;
+      }
+    }
 
     if (currentStep < totalSteps) {
       currentStep++;
