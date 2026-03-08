@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (!emailRegex.test(email.value)) {
       email.classList.add("form__input--error");
       emailError.textContent =
-        "Введите корректный email (например: name@domain.com)";
+        "Введите корректный email";
       emailError.classList.add("form__error--visible");
       isValid = false;
     }

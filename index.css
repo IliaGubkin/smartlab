@@ -360,9 +360,10 @@ textarea::placeholder {
   height: 0;
 }
 
-/* Круглая рамка - по умолчанию белая */
 .checkbox__circle {
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -373,8 +374,8 @@ textarea::placeholder {
 
 /* Состояние ошибки - красная рамка */
 .checkbox__circle--error {
-  border: 2px solid;
-  border-color: #ff4444;
+  outline: 2px solid;
+  outline-color: #ff4444;
   animation: shake 0.3s ease;
 }
 
@@ -403,12 +404,8 @@ textarea::placeholder {
 /* Точка внутри */
 .checkbox__input:checked+.checkbox__circle::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--primary-color);
 }
@@ -489,6 +486,7 @@ textarea::placeholder {
 
 .form__group {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 10px;
   text-align: left;
@@ -530,14 +528,13 @@ textarea::placeholder {
 }
 
 .form__input--error {
-  border: 2px solid;
-  border-color: #ff4444;
+  outline: 2px solid;
+  outline-color: #ff4444;
 }
 
 .form__input--error:focus {
-  border: 2px solid;
-  border-color: #ff4444;
-  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+  outline: 2px solid;
+  outline-color: #ff4444;
 }
 
 /* Textarea */
@@ -627,9 +624,10 @@ textarea::placeholder {
 
 /* Error message */
 .form__error {
-  font-size: 12px;
+  position: absolute;
+  font-size: 10px;
   color: #ff4444;
-  margin-top: 4px;
+  bottom: -15px;
   display: none;
 }
 
@@ -1729,6 +1727,11 @@ textarea::placeholder {
     height: 19px;
   }
 
+  .checkbox__input:checked+.checkbox__circle::after {
+    width: 10px;
+    height: 10px;
+  }
+
   .checkbox {
     gap: 15px
   }
@@ -2567,6 +2570,11 @@ textarea::placeholder {
     flex-shrink: 0;
     width: 19px;
     height: 19px;
+  }
+
+  .checkbox__input:checked+.checkbox__circle::after {
+    width: 10px;
+    height: 10px;
   }
 
   .checkbox {
