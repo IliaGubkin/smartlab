@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("headerStepWrapper").style.display = "block";
       document.getElementById("capsuleImageLast").style.display = "none";
       document.getElementById("dnkImageLast").style.display = "none";
-      closeModalBtn.style.display = "block";
+      closeModalBtn.style.display = "flex";
       document.querySelector(".modal__footer--left").style.display = "flex";
     }
   }
