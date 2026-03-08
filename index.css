@@ -969,6 +969,9 @@ textarea::placeholder {
 }
 
 .modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -1415,7 +1418,7 @@ textarea::placeholder {
   .modal__container {
     width: 554px;
     border-radius: 60px;
-           max-height: fit-content;
+    max-height: fit-content;
     height: 100%;
     padding: 42px;
     justify-content: space-between;
@@ -1499,16 +1502,16 @@ textarea::placeholder {
     font-size: 43px;
     margin-top: 7px;
   }
-  
+
   .step--3 .step__title {
     font-size: 43px;
     margin-top: 2px;
   }
 
-      .step--3 {
-        width: 100%;
-        max-width: 465px;
-    }
+  .step--3 {
+    width: 100%;
+    max-width: 465px;
+  }
 
   .step__title {
     margin-top: 11px;
@@ -1549,8 +1552,8 @@ textarea::placeholder {
   }
 
   .form__label {
-          font-size: 15px;
-        letter-spacing: -0.7px;
+    font-size: 15px;
+    letter-spacing: -0.7px;
   }
 
   .form__input {
@@ -1570,15 +1573,15 @@ textarea::placeholder {
   }
 
   input::placeholder,
-textarea::placeholder {
-  font-size: 13px;
-  font-family: "Rubik", Arial, sans-serif;
-  line-height: 120%;
-  letter-spacing: -0.5px;
-  color: rgba(52, 66, 93, 1);
-  opacity: 1;
-  /* Для Firefox */
-}
+  textarea::placeholder {
+    font-size: 13px;
+    font-family: "Rubik", Arial, sans-serif;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+    color: rgba(52, 66, 93, 1);
+    opacity: 1;
+    /* Для Firefox */
+  }
 
   .step--1 {
     margin-bottom: 74px;
@@ -1636,14 +1639,14 @@ textarea::placeholder {
   }
 
   .payment__bot-button {
-            padding: 18px 15px;
-                font-size: 15px;
-        letter-spacing: -0.6px;
+    padding: 18px 15px;
+    font-size: 15px;
+    letter-spacing: -0.6px;
   }
 
-.payment__bot-button__icon {
-  width: 18px;
-}
+  .payment__bot-button__icon {
+    width: 18px;
+  }
 
   .payment__price {
 
@@ -1760,7 +1763,7 @@ textarea::placeholder {
   /* Прогресс */
   .progress {
     width: 168px;
-        height: 12px;
+    height: 12px;
   }
 
   /* Футер модалки */
@@ -1780,9 +1783,9 @@ textarea::placeholder {
 
   .modal__footer .button--left,
   .modal__footer .button--right {
-        width: 96px;
-        height: 48px;
-        padding: 10px 12px;
+    width: 96px;
+    height: 48px;
+    padding: 10px 12px;
     font-size: 17px;
   }
 
@@ -1939,7 +1942,7 @@ textarea::placeholder {
     max-width: 450px;
   }
 
-   .step--2 {
+  .step--2 {
     max-width: 470px;
     margin-top: 55px;
   }
